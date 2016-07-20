@@ -1,0 +1,30 @@
+HomeologousSeqSplit: BaseClasses.o FilesFormats.o sam_mapping.o connectioncomponent.o utils.o main.o Vertex.o Graph.o AdditionClasses.o AssemblyStatistics.o Path.o
+	g++ -static-libstdc++ -o HomeologousSeqSplit BaseClasses.o FilesFormats.o sam_mapping.o connectioncomponent.o utils.o main.o Vertex.o Graph.o AdditionClasses.o AssemblyStatistics.o Path.o
+
+BaseClasses.o:
+	g++ -O -c BaseClasses.cpp
+FileFormats.o:
+	g++ -O -c FileFormats.cpp
+sam_mapping.o:
+	g++ -O -c sam_mapping.cpp
+connectioncomponent.o:
+	g++ -O -c connectioncomponent.cpp
+utils.o:
+	g++ -O -c utils.cpp
+main_2.o:
+	g++ -O -c main.cpp
+Vertex.o:
+	g++ -O -c Vertex.cpp
+Graph.o:
+	g++ -O -c Graph.cpp
+AdditionClasses.o:
+	g++ -O -c AdditionClasses.cpp
+AssemblyStatistics.o:
+		g++ -O -c AssemblyStatistics.cpp
+Path.o:
+	g++ -O -c Path.cpp
+
+run:
+	  testing $(ARGS)
+clean:
+		rm -rf HomeologousSeqSplit *.o
